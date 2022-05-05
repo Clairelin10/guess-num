@@ -1,10 +1,14 @@
 import random
 
-r = random.randint(1, 100)
+start = input('請決定終極密碼戰數字範圍，開始值: ')
+end = input('請決定終極密碼戰數字範圍，結束值: ')
+start = int(start)
+end = int(end)
+r = random.randint(start, end)
 count = 0
 while True:
-	count += 1
-	guess = input('1 ~ 100 猜一數字？ 請輸入數字: ')
+	count += 1 # count = count + 1
+	guess = input('請猜數字: ')
 	guess = int(guess)
 
 	if guess == r:
